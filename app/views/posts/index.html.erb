@@ -1,0 +1,8 @@
+<h1>All Posts</h1>
+
+<% @posts.each do |n| %>
+	<h3><%= link_to n.title, post_path(n) %></h3>
+	<p><%= n.content %><p>
+<% end %>
+
+<%= will_paginate @posts %> 
